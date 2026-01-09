@@ -72,7 +72,7 @@ cd backend
 npm run dev
 ```
 
-The server will run on `http://localhost:5000`
+The server will run on `https://workzen-backend.vercel.app`
 
 ### 5. Start Frontend
 

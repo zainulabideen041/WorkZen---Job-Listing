@@ -188,11 +188,14 @@ const CreateJob = () => {
   const fetchJob = async (id) => {
     setIsLoading(true);
     try {
-      const response = await fetch(`http://localhost:5000/api/jobs/${id}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const response = await fetch(
+        `https://workzen-backend.vercel.app/api/jobs/${id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
       const job = await response.json();
 
       setFormData({
@@ -230,8 +233,8 @@ const CreateJob = () => {
       };
 
       const url = jobId
-        ? `http://localhost:5000/api/jobs/${jobId}`
-        : "http://localhost:5000/api/jobs";
+        ? `https://workzen-backend.vercel.app/api/jobs/${jobId}`
+        : "https://workzen-backend.vercel.app/api/jobs";
 
       const method = jobId ? "PUT" : "POST";
 

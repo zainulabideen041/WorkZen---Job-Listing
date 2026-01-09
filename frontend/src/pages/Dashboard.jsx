@@ -20,7 +20,7 @@ const Dashboard = () => {
   const fetchStats = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/jobs/stats/dashboard",
+        "https://workzen-backend.vercel.app/api/jobs/stats/dashboard",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -37,7 +37,7 @@ const Dashboard = () => {
   // Fetch jobs
   const fetchJobs = async () => {
     try {
-      let url = "http://localhost:5000/api/jobs?";
+      let url = "https://workzen-backend.vercel.app/api/jobs?";
       if (filter === "my") url += "filter=my&";
       if (search) url += `search=${search}`;
 
@@ -62,7 +62,7 @@ const Dashboard = () => {
     if (!confirm("Are you sure you want to delete this job?")) return;
 
     try {
-      await fetch(`http://localhost:5000/api/jobs/${id}`, {
+      await fetch(`https://workzen-backend.vercel.app/api/jobs/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
