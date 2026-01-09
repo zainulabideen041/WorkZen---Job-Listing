@@ -8,7 +8,7 @@ const Contact = () => {
       <img
         src={leftImg}
         alt=""
-        className="absolute left-0 top-0 w-[50%] md:w-auto"
+        className="absolute left-0 top-0 w-[60%]"
         width={800}
       />
       <img
@@ -32,7 +32,7 @@ const Contact = () => {
       <img
         src={circleImg}
         alt=""
-        className="absolute right-[5%] top-[50%] opacity-10 hidden md:block"
+        className="absolute right-[5%] top-[5%] opacity-10 hidden md:block"
         width={150}
       />
       <div className="flex flex-col-reverse md:flex-row justify-between items-center md:items-start gap-12 md:gap-16 max-w-7xl mx-auto px-4 md:px-8 relative z-10">
